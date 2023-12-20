@@ -17,7 +17,7 @@
         <div class="menu">
           <ul class="list">
             <li><a href="news.php">News</a></li>
-            <li><a href="reviews.php">Review</a></li>
+            <li><a href="reviews.php">Reviews</a></li>
             <li><a href="category.php">Category</a></li>
             <li><a href="about.php">About</a></li>
             <li class="login-button"><a href="login.php">Login</a></li>

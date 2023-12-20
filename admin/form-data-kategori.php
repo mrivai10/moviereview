@@ -46,7 +46,7 @@
                 <input required type="text" id="judul_film" name="nama_kategori" value="<?php echo $nama_kategori; ?>" placeholder="Nama Kategori">
 
                 <label for="tahun">Foto</label><br>
-                <input type="file" id="tahun" name="foto_kategori" placeholder="Foto Kategori" value="<?php echo $foto_kategori; ?>">
+                <input type="file" id="tahun" name="foto_kategori" placeholder="Foto Kategori" value="<?php echo $foto_kategori; ?>" accept="image/*">
             
                 <?php
                     if(isset($_GET['edit'])){

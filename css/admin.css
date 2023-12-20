@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap");
+@font-face {
+  font-family: "NunitoSans";
+  src: url("../font/NunitoSans.ttf") format("truetype");
+}
 
 * {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "NunitoSans", sans-serif;
   box-sizing: border-box;
   /* border: 1px solid black; */
 }
@@ -133,7 +136,7 @@ body {
 }
 
 .dashboard .card {
-  width: 250px;
+  width: 200px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
   border-radius: 10px;  
   overflow: hidden;
@@ -141,7 +144,8 @@ body {
 }
 
 .dashboard .card-header {
-  background-color: var(--base);
+  background: rgb(10,22,52);
+  background: linear-gradient(347deg, rgba(10,22,52,1) 24%, rgba(18,88,145,1) 100%);
   color: var(--white); 
   padding: 5px 10px; 
 }

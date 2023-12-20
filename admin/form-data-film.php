@@ -62,17 +62,17 @@
                 <textarea name="sinopsis" id="sinopsis" cols="30" rows="10"><?php echo $sinopsis;?></textarea>
 
                 <label for="foto_film">Foto</label><br>
-                <input type="file" id="foto_film" name="foto_film" placeholder="Foto Film" value="<?php echo $foto_film; ?>">
+                <input type="file" id="foto_film" name="foto_film" placeholder="Foto Film" value="<?php echo $foto_film; ?>" accept="image/*">
 
                 <label for="kategori">Kategori</label>
                 <select name="id_kategori" id="id_kategori">
                     <?php 
                         $i =1;
-                        $query = mysqli_query($conn, "SELECT * FROM `kategori`");
+                        $query = mysqli_query($conn, "SELECT * FROM `kategori` ORDER BY nama_kategori");
                                             
                         while($fetch = mysqli_fetch_array($query)){
                     ?>
-                        <option value="<?php echo $fetch['id_kategori']; ?>"><?php echo $fetch['nama_kategori']; ?></option>
+                        <option value="<?php echo $fetch['id_kategori']; ?>" <?php if($fetch['id_kategori'] == $id_kategori) echo "selected"; ?> ><?php echo $fetch['nama_kategori']; ?></option>
                     <?php
                         }
                     ?>

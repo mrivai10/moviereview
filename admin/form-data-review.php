@@ -62,11 +62,11 @@
                 <select name="id_film" id="id_film">
                     <?php 
                         $i =1;
-                        $query = mysqli_query($conn, "SELECT * FROM `film`");
+                        $query = mysqli_query($conn, "SELECT * FROM `film` ORDER BY judul_film");
                                             
                         while($fetch = mysqli_fetch_array($query)){
                     ?>
-                        <option value="<?php echo $fetch['id_film']; ?>"><?php echo $fetch['judul_film']; ?></option>
+                        <option value="<?php echo $fetch['id_film']; ?>" <?php if($fetch['id_film'] == $id_film) echo "selected"; ?>><?php echo $fetch['judul_film']; ?></option>
                     <?php
                         }
                     ?>

@@ -50,29 +50,6 @@
           <div class="card-header">
             <h2>
             <?php
-                $sql = "SELECT COUNT(*) as total FROM film";
-                $result = mysqli_query($conn, $sql);  
-
-                if (mysqli_num_rows($result) > 0) {
-                    $row = mysqli_fetch_assoc($result);
-                    $total = $row['total'];
-                    echo $total;
-                } else {
-                      echo "Belum ada data yang terdaftar";
-               }
-              ?>
-            </h2>
-          </div>
-          <div class="card-content">
-            <h3>Data Film</h3>
-          </div>
-          <div class="card-footer"></div>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h2>
-            <?php
                 $sql = "SELECT COUNT(*) as total FROM review";
                 $result = mysqli_query($conn, $sql);  
 
@@ -88,6 +65,52 @@
           </div>
           <div class="card-content">
             <h3>Data Review</h3>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>
+            <?php
+                $sql = "SELECT COUNT(*) as total FROM trailer";
+                $result = mysqli_query($conn, $sql);  
+
+                if (mysqli_num_rows($result) > 0) {
+                    $row = mysqli_fetch_assoc($result);
+                    $total = $row['total'];
+                    echo $total;
+                } else {
+                      echo "Belum ada data yang terdaftar";
+               }
+              ?>
+            </h2>
+          </div>
+          <div class="card-content">
+            <h3>Data Trailer</h3>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>
+            <?php
+                $sql = "SELECT COUNT(*) as total FROM film";
+                $result = mysqli_query($conn, $sql);  
+
+                if (mysqli_num_rows($result) > 0) {
+                    $row = mysqli_fetch_assoc($result);
+                    $total = $row['total'];
+                    echo $total;
+                } else {
+                      echo "Belum ada data yang terdaftar";
+               }
+              ?>
+            </h2>
+          </div>
+          <div class="card-content">
+            <h3>Data Film</h3>
           </div>
           <div class="card-footer"></div>
         </div>

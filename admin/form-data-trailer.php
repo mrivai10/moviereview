@@ -60,7 +60,7 @@
                                             
                         while($fetch = mysqli_fetch_array($query)){
                     ?>
-                        <option <?php if(isset($_GET['edit'])){echo "selected"; } ?> value="<?php echo $fetch['id_review']; ?>"><?php echo $fetch['judul_review']; ?></option>
+                        <option value="<?php echo $fetch['id_review']; ?>" <?php if($fetch['id_review'] == $id_review) echo "selected"; ?>><?php echo $fetch['judul_review']; ?></option>
                     <?php
                         }
                     ?>
